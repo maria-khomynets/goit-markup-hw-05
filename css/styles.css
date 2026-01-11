@@ -475,6 +475,10 @@ button:focus {
   letter-spacing: 0.02em;
   color: #fff;
 }
+
+.footer-svg {
+  fill: #fff;
+}
 /* домашнє завдання 3 */
 
 .feature-list {
