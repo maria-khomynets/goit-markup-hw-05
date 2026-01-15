@@ -62,7 +62,9 @@
       <section class="main-section">
         <div class="container">
           <h1 class="main-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="button">Order Service</button>
+          <button data-modal-open type="button" class="button">
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -489,62 +491,7 @@
           </ul>
         </div>
       </section>
-      <section>
-        <form class="form-modal">
-          <span class="form-span-modal"
-            >Leave your contacts and we will call you back</span
-          >
-          <label class="form-label-modal">
-            <span class="form-text-modal">name</span>
-            <div>
-              <input
-                class="form-input-modal"
-                type="text"
-                name="user-name"
-                required
-              />
-              <svg class="social-list-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
-            </div>
-          </label>
-          <label class="form-label-modal">
-            <span class="form-text-modal">phone</span>
-            <div>
-              <input
-                class="form-input-modal"
-                type="tel"
-                name="user-phone"
-                required
-              />
-              <svg class="social-list-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
-            </div>
-          </label>
-
-          <label class="form-label-modal">
-            <span class="form-text-modal">email</span>
-            <div>
-              <input
-                class="form-input-modal"
-                type="email"
-                name="user-email"
-                required
-              />
-              <svg class="social-list-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
-            </div>
-          </label>
-          <label class="form-label-modal">
-            <span class="form-text-modal">Comment</span>
-            <textarea class="form-textarea-modal" name="description"></textarea>
-          </label>
-
-          <button class="form-button-modal" type="submit">Send</button>
-        </form>
-      </section>
+      <section></section>
     </main>
     <footer class="footer">
       <div class="container footer-flex">
@@ -606,17 +553,15 @@
             </li>
           </ul>
         </div>
+        <p class="social-footer-text">Subscribe</p>
         <form>
-          <label class="form-label">
-            <span class="label-text">Subscribe</span>
+          <input
+            type="text"
+            class="form-input-footer"
+            name="Subscribe"
+            placeholder="E-mail"
+          />
 
-            <input
-              type="text"
-              class="form-input"
-              name="Subscribe"
-              placeholder="E-mail"
-            />
-          </label>
           <button type="submit" class="button-form">
             <span> Subscribe</span>
             <svg class="footer-svg" width="24" height="20">
@@ -627,10 +572,22 @@
       </div>
     </footer>
 
-    <div class="modal-overlay is-open">
+    <div class="modal-overlay" data-modal>
       <div class="modal">
         <p class="modal-text">Leave your contacts and we will call you back</p>
+        <button class="modal-close-btn" type="button" data-modal-close>
+          <svg class="modal-svf-btn" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <form class="form-modal">
+          <input type="text" class="input-modal" name="user-name" required />
+          <input type="tel" class="input-modal" name="user-tel" required />
+          <input type="email" class="input-modal" name="user-email" required />
+          <button class="form-button-modal" type="submit">Send</button>
+        </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
