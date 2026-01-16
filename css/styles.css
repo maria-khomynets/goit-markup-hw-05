@@ -692,6 +692,16 @@ button:focus {
   height: 16px;
 
   margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.check-modal:checked + .modal-label-check > .span-checkbox {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
 
 .modal-label-check {
