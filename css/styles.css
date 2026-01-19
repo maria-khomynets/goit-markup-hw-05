@@ -612,16 +612,23 @@ button:focus {
   border: none;
 }
 
-.modal-svf-btn:hover,
-.modal-svf-btn:focus {
-  fill: #ffffff;
+.modal-close-btn:hover .modal-svg-btn,
+.modal-close-btn:focus .modal-svg-btn {
+  fill: #fff;
 }
 
-.modal-svf-btn {
+.modal-svg-btn {
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.span-checkbox svg {
+  display: none;
+}
+
+.check-modal:checked + .modal-label-check .span-checkbox svg {
+  display: block;
+}
 /* форма модальне вікно */
 
 .form-modal {
@@ -634,7 +641,7 @@ button:focus {
 }
 
 .modal-label-field {
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
 
 .input-modal {
@@ -660,7 +667,7 @@ button:focus {
   display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.33;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
